@@ -2,7 +2,7 @@ package com.example.androidsimulation.model.pojos
 
 import com.google.gson.annotations.SerializedName
 
-data class Products(
+data class Product(
     @SerializedName("id")
     val id: Int,
     @SerializedName("image")
