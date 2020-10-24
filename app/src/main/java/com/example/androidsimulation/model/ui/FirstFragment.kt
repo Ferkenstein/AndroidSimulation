@@ -52,6 +52,9 @@ class FirstFragment : Fragment(), ProductsAdapter.IPassTheData {
     }
 
     override fun passTheProducts(product: ProductEntity) {
+        val bundle = Bundle()
+        bundle.putInt("id",product.id)
         findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+
     }
 }
