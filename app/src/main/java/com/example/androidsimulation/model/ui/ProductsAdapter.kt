@@ -10,7 +10,7 @@ import com.example.androidsimulation.model.localRoom.ProductEntity
 import com.example.androidsimulation.model.pojos.Product
 import kotlinx.android.synthetic.main.product_list.view.*
 
-class ProductsAdapter :RecyclerView.Adapter<ProductsAdapter.ProductsViewHolder>() {
+class ProductsAdapter(val mIPassTheData: IPassTheData) :RecyclerView.Adapter<ProductsAdapter.ProductsViewHolder>() {
     //Lista Vacia
     private var productsList = emptyList<ProductEntity>()
     // Actualización de datos
@@ -24,6 +24,7 @@ class ProductsAdapter :RecyclerView.Adapter<ProductsAdapter.ProductsViewHolder>(
         val name = itemView.nameProduct
         val price = itemView.priceProduct
         val clickListener = itemView.setOnClickListener{
+            mIPassTheData.passTheProducts(productsList[adapterPosition])
         }
     }
 
@@ -41,7 +42,7 @@ class ProductsAdapter :RecyclerView.Adapter<ProductsAdapter.ProductsViewHolder>(
 
     override fun getItemCount() = productsList.size
 
-    interface passTheData {
+    interface IPassTheData {
         fun passTheProducts(product : ProductEntity)
     }
 }
