@@ -1,7 +1,7 @@
-package com.example.androidsimulation.network
+package com.example.androidsimulation.model.network
 
-import com.example.androidsimulation.pojos.AndroidDetails
-import com.example.androidsimulation.pojos.Products
+import com.example.androidsimulation.model.pojos.AndroidDetails
+import com.example.androidsimulation.model.pojos.Products
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

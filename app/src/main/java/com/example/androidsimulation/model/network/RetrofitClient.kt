@@ -1,4 +1,4 @@
-package com.example.androidsimulation.network
+package com.example.androidsimulation.model.network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

@@ -1,4 +1,4 @@
-package com.example.androidsimulation.pojos
+package com.example.androidsimulation.model.pojos
 
 
 import com.google.gson.annotations.SerializedName
